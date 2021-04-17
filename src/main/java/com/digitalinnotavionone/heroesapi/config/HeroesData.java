@@ -37,8 +37,23 @@ public class HeroesData {
                 .withPrimaryKey("id", "1")
                 .withString("name", "Iron Man")
                 .withString("universe", "Marvel")
-                .withNumber("films", 6);
+                .withNumber("films", 3);
+
+        Item hero2 = new Item()
+                .withPrimaryKey("id", "2")
+                .withString("name", "Captain America")
+                .withString("universe", "Marvel")
+                .withNumber("films", 3);
+
+        Item hero3 = new Item()
+                .withPrimaryKey("id", "3")
+                .withString("name", "Thor")
+                .withString("universe", "Marvel")
+                .withNumber("films", 3);
 
         PutItemOutcome outcome = table.putItem(hero);
+        outcome = table.putItem(hero2);
+        outcome = table.putItem(hero3);
+
     }
 }
